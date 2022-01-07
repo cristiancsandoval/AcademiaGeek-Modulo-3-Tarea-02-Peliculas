@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/*DOCUMENTO PRINCIPAL DE ESTILOS*/
+/*Desarrollado por medio del compilador de estilos SASS*/
+/*RESETEO GENERAL DE ESTILOS*/
+li, a, p {
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Variables*/
+/*CONFIGURACIÓN DE ESTILOS HEADER*/
+header {
+  background-color: white;
+  width: 100%;
+  height: 90px;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+}
+header .logo {
+  width: 80px;
+  position: absolute;
+  top: 5px;
+  left: 50px;
+}
+header .logo img {
+  width: 100%;
+  height: auto;
+}
+header .menuNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .menuNav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header .menuNav ul li {
+  margin: 0 10px;
+}
+header .menuNav ul li a {
+  color: #e51d2e;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #a0a0a0;
+}
+main #slider {
+  padding: 130px 10% 1.5em 10%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 100%;
+  background-color: #c8c8c8;
+}
+main #slider .btnIzquierdo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main #slider .btnIzquierdo #botonIzquierdo {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #a0a0a0;
+  background-color: #c8c8c8;
+}
+main #slider .btnDerecho {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main #slider .btnDerecho #botonDerecho {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #a0a0a0;
+  background-color: #c8c8c8;
+}
+main #slider #sliderImagenes {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #a0a0a0;
+}
+main #slider #sliderImagenes .sliderPel {
+  width: 250px;
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000031;
+}
+main #slider #sliderImagenes .sliderPel img {
+  width: 100%;
+  height: auto;
+}
+main #listaPeliculas {
+  background-color: #000031;
+  padding: 1.5em 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  flex-wrap: wrap;
+}
+main #listaPeliculas .contenedorPelicula {
+  width: 200px;
+  margin: 10px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+main #listaPeliculas .contenedorPelicula .fotoPelicula {
+  width: 100%;
+  height: auto;
+}
+main #listaPeliculas .contenedorPelicula .nombrePelicula {
+  width: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1em;
+  text-align: left;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 10%;
+  background-color: #c8c8c8;
+}
+main form h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3em;
+  padding: 1em;
+}
+main form label {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2em;
+  width: 30%;
+}
+main form input {
+  width: 100%;
+}
+main form .formularioElemento {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  margin: 0.3em 0;
+}
+main form .formularioElemento #enviarFormulario {
+  width: 80px;
+  height: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2em;
+  color: #c8c8c8;
+  background-color: #000031;
+}
+main form .formularioElementoObservaciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+main form .formularioElementoObservaciones label {
+  width: 100%;
+  text-align: left;
+}
+main form .formularioElementoObservaciones input {
+  width: 100%;
+  height: 6em;
+}
+
+/*# sourceMappingURL=style.css.map */

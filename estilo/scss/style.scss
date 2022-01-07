@@ -1,0 +1,314 @@
+/*DOCUMENTO PRINCIPAL DE ESTILOS*/
+/*Desarrollado por medio del compilador de estilos SASS*/
+
+/*RESETEO GENERAL DE ESTILOS*/
+li, a, p {
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Variables*/
+$fuente: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$color-azul: #000031;
+$color-rojo: #e51d2e;
+$gris-claro:#c8c8c8;
+$gris-oscuro:#a0a0a0;
+
+/*CONFIGURACIÓN DE ESTILOS HEADER*/
+header{
+
+    background-color: white;
+
+    width: 100%;
+    height: 90px;
+    padding: 5px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+
+    .logo{
+
+        width: 80px;
+
+        position: absolute;
+        top: 5px;
+        left: 50px;
+          
+        img{
+
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    .menuNav{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        ul{
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            li{
+
+                margin: 0 10px;
+
+                a{
+
+                    color: $color-rojo;
+                    font-size: 1.2em;
+                    text-transform: uppercase;
+                    font-family: $fuente;
+
+                }
+            }
+        }
+    }
+}
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $gris-oscuro;
+
+    #slider{
+
+        padding: 130px 10% 1.5em 10%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 50px auto 50px;
+        grid-template-rows: 100%;
+
+        background-color: $gris-claro;
+
+        .btnIzquierdo{
+
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            #botonIzquierdo{
+
+                width: 0; 
+                height: 0; 
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent; 
+                border-right:20px solid $gris-oscuro;
+                background-color: $gris-claro;
+
+            }
+
+        }
+
+        .btnDerecho{
+
+            grid-column: 3/4;
+            grid-row: 1/2;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            #botonDerecho{
+
+                width: 0; 
+                height: 0; 
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid $gris-oscuro;
+                background-color: $gris-claro;
+                
+            }
+
+        }
+
+        #sliderImagenes{
+            
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            background-color: $gris-oscuro;
+
+            .sliderPel{
+
+                width: 250px;
+                margin: 10px 20px;
+
+                display: flex;
+                flex-direction: column;
+
+                border: 2px solid $color-azul;
+          
+                img{
+        
+                    width: 100%;
+                    height: auto;
+
+                }
+
+                
+
+            }
+
+        }
+
+    }
+
+    #listaPeliculas{
+
+        background-color: $color-azul;
+        padding: 1.5em 5%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: top;
+        flex-wrap: wrap;
+
+        .contenedorPelicula{
+
+            width: 200px;
+            margin: 10px;
+            padding: 2px;
+
+            display: flex;
+            flex-direction: column;
+
+            background-color: white;
+
+            .fotoPelicula{
+
+                width: 100%;
+                height: auto;
+
+            }
+
+            .nombrePelicula{
+
+                width: 100%;
+                font-family: $fuente;
+                font-size: 1em;
+                text-align: left;
+
+            }
+        }
+    }
+
+    form{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 70%;
+        margin: 10%;
+
+        background-color: $gris-claro;
+
+        h2{
+
+            font-family: $fuente;
+            font-size: 1.3em;
+            padding: 1em;
+
+        }
+
+        label{
+
+            font-family: $fuente;
+            font-size: 1.2em;
+            width: 30%;
+
+        }
+
+        input{
+
+            width: 100%;
+
+        }
+
+        .formularioElemento{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            width: 50%;
+            margin: 0.3em 0;
+
+            #enviarFormulario{
+
+                width: 80px;
+                height: 30px;
+                font-family: $fuente;
+                font-size: 1.2em;
+                color: $gris-claro;
+                background-color: $color-azul;
+
+            }
+
+        }
+
+        .formularioElementoObservaciones{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 50%;
+
+            label{
+                width: 100%;
+                text-align: left;
+            }
+
+            input{
+                width: 100%;
+                height: 6em;
+            }
+
+        }
+
+    }
+
+}
